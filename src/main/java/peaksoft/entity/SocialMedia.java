@@ -29,4 +29,11 @@ public class SocialMedia {
             this.socialMedia = "NOT PROVIDED!";
         }
     }
+
+    @Override
+    public String toString() {
+        return "- - - SocialMedia - - -" +
+                "ID: " + id +
+                "Social Media: " + socialMedia;
+    }
 }

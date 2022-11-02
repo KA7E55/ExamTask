@@ -45,4 +45,14 @@ public class Person {
         this.email = email;
         this.gender = gender;
     }
+
+    @Override
+    public String toString() {
+        return "- - - Person - - -" +
+                "ID: " + id +
+                "Name: " + name +
+                "Age: " + age +
+                "Email: " + email +
+                "Gender: " + gender;
+    }
 }

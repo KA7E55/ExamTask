@@ -17,11 +17,10 @@ public class CompanyDao implements CompanyService {
         try (Session session = sessionFactory.openSession()) {
             session.beginTransaction();
             session.createNativeQuery(
-                    "create table if not exists users(" +
+                    "create table if not exists companies(" +
                             "id serial primary key," +
                             "name varchar(50)  ," +
-                            "last_name varchar(50) ," +
-                            "age int not null );").executeUpdate();
+                            "location varchar(50));").executeUpdate();
             session.getTransaction().commit();
         } catch (HibernateException he) {
             throw new RuntimeException();

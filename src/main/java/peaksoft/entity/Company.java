@@ -34,4 +34,12 @@ public class Company {
 
         this.location = location;
     }
+
+    @Override
+    public String toString() {
+        return "- - - Company - - -" +
+                "ID: " + id +
+                "Company Name: " + companyName +
+                "Location: " + location ;
+    }
 }

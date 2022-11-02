@@ -29,4 +29,17 @@ public class Car {
 
     @OneToOne(cascade = {ALL},fetch = FetchType.EAGER)
     private Garage garage;
+
+    public Car(int mark, String producedCountry) {
+        this.mark = mark;
+        this.producedCountry = producedCountry;
+    }
+
+    @Override
+    public String toString() {
+        return "- - - Car - - -" +
+                "ID: " + id +
+                "Mark: " + mark +
+                "Produced Country: " + producedCountry;
+    }
 }
